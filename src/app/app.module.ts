@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PlayersComponent } from './players/players.component';
 import { NoPlayersComponent } from './no-players/no-players.component';
+import { SinglePlayerComponent } from './single-player/single-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PlayersComponent,
-    NoPlayersComponent
+    NoPlayersComponent,
+    SinglePlayerComponent
   ],
   imports: [
     BrowserModule,

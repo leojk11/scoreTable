@@ -1,0 +1,150 @@
+.single-player {
+    background-color: white;
+
+    padding: 15px;
+    padding-bottom: 60px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    color: #514D8A;
+
+    border: 2px solid #514D8A;
+    border-radius: 10px;
+
+    .left {
+        width: 30%;
+
+        span {
+            font-size: 180px;
+    
+            font-weight: 400;
+        }
+    }
+
+    .right {
+        width: 68%;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2px;
+
+                background-color: transparent;
+
+                border: none;
+
+                color: red;
+
+                font-size: 15px;
+
+                span {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .name {
+            width: 100%;
+
+            border-bottom: 2px solid #514D8A;
+
+            margin-top: 30px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            padding-top: 20px;
+
+            .counter {
+                h1 {
+                    font-size: 80px;
+
+                    color: black;
+
+                    width: max-content;
+
+                    margin-top: -20px;
+                }
+
+                button {
+                    width: max-content;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    padding: 3px;
+                    margin-top: -12px;
+
+                    background-color: transparent;
+
+                    border: none;
+
+                    outline: none;
+                    
+                    font-size: 15px;
+
+                    cursor: pointer;
+
+                    span {
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            .counter-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    width: 170px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+
+                    padding: 3px;
+
+                    border: none;
+                    outline: none;
+
+                    border-radius: 5px;
+
+                    font-size: 22px;
+
+                    color: #514D8A;
+
+                    cursor: pointer;
+                }
+
+                button.increment {
+                    background-color: #D9FFCF;
+
+                    border: 1px solid #73C57C;
+                }
+                button.decrement {
+                    background-color: #F0C3CC;
+
+                    border: 1px solid #C573A9;
+
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

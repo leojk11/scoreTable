@@ -7,4 +7,70 @@
     margin: 0 auto;
 
     background-color: #F3F3F7;
+
+    .players-wrapper {
+        width: 60%;
+
+        margin: auto;
+        margin-top: 30px;
+
+        .top {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                width: 110px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+
+                padding: 3px;
+
+                background-color: #E32D2D;
+
+                color: white;
+
+                border: none;
+
+                outline: none;
+
+                font-weight: lighter;
+            }
+        }
+    }
+
+    .button-wrapper {
+        width: 100%;
+
+        margin-top: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            width: 120px;
+    
+            padding: 5px;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+    
+            border: none;
+            border-radius: 3px;
+    
+            outline: none;
+    
+            background-color: #BB691E;
+
+            cursor: pointer;
+        }
+    }
 }
