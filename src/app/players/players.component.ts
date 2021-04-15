@@ -30,11 +30,27 @@ export class PlayersComponent implements OnInit {
   }
 
   addPlayers() {
+    this.players = this.playersService.getPlayers();
+
     const index = this.players.length + 1;
 
     const player = new Player(index, 0);
 
     this.playersService.addPlayer(player);
+
+    if(this.players.length > 0) {
+      this.noPlayers = false;
+    }
+  }
+
+  deleteAllPlayers() {
+    this.playersService.deleteAll();
+
+    this.players = [];
+
+    if(this.players.length == 0) {
+      this.noPlayers = true;
+    }
   }
 
 }
