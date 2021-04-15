@@ -5,33 +5,33 @@
 
     <div class="right">
         <div class="top">
-            <button>
+            <button (click)='delete()'>
                 <span class="material-icons-outlined">delete</span>
                 Delete
             </button>
         </div>
 
         <div class="name">
-            <h2>Player #1</h2>
+            <h2>{{ player.name }}</h2>
         </div>
 
         <div class="main">
             <div class="counter">
-                <h1>0</h1>
+                <h1>{{ player.score }}</h1>
 
-                <button>
+                <button (click)='reset()'>
                     <span class="material-icons-outlined">restart_alt</span>
                     Reset
                 </button>
             </div>
 
             <div class="counter-buttons">
-                <button class='increment'>
+                <button class='increment' (click)='increment()'>
                     <span class="material-icons">add</span>
                     Increment
                 </button>
 
-                <button class='decrement'>
+                <button class='decrement' (click)='decrement()'>
                     <span class="material-icons">remove</span>
                     Decrement
                 </button>
