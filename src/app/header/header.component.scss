@@ -1,0 +1,24 @@
+.header {
+    position: fixed;
+    
+    width: 100%;
+
+    background-color: #0D065A;
+
+    padding: 10px;
+
+    .inner-header {
+        width: 60%;
+
+        margin: 0 auto;
+
+
+        h1 {
+            color: whitesmoke;
+
+            font-weight: lighter;
+            
+            text-transform: uppercase;
+        }
+    }
+}
