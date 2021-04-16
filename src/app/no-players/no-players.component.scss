@@ -15,3 +15,11 @@
         font-size: 12px;
     }
 }
+
+@media only screen and (min-width: 374px) and (max-width: 813px) { 
+    .no-players {
+        p {
+            font-size: 15px;
+        }
+    }
+}

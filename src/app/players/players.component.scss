@@ -3,16 +3,23 @@
     height: 100vh;
 
     padding-top: 60px;
+    padding-bottom: 60px;
 
     margin: 0 auto;
 
     background-color: #F3F3F7;
+
+    overflow: auto;
 
     .players-wrapper {
         width: 60%;
 
         margin: auto;
         margin-top: 30px;
+
+        overflow: auto;
+
+        background-color: #F3F3F7;
 
         .top {
             width: 100%;
@@ -29,7 +36,7 @@
                 justify-content: center;
                 gap: 5px;
 
-                padding: 3px;
+                padding: 4px;
 
                 background-color: #E32D2D;
 
@@ -40,6 +47,16 @@
                 outline: none;
 
                 font-weight: lighter;
+
+                font-size: 15px;
+
+                border-radius: 3px;
+
+                cursor: pointer;
+
+                span {
+                    font-size: 17px;
+                }
             }
         }
     }
@@ -73,6 +90,24 @@
             cursor: pointer;
 
             box-shadow: 0 4px 3px 0 rgba(10, 60, 49, 0.20);
+        }
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 813px) { 
+    .players {
+        width: 80%;
+
+        .players-wrapper {
+            width: 90%;
+        }
+
+        .button-wrapper {
+            button {
+                width: 150px;
+
+                font-size: 20px;
+            }
         }
     }
 }
