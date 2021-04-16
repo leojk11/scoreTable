@@ -22,12 +22,10 @@ export class PlayersComponent implements OnInit {
   }
 
   getPlayers() {
-    this.players = this.playersService.getPlayers();
-
-    console.log(this.players.length);
-
-    if(this.players.length == 0) {
+    if(this.playersService.getPlayers().length == 0) {
       this.noPlayers = true;
+    } else {
+      this.players = this.playersService.getPlayers();
     }
   }
 
@@ -53,7 +51,6 @@ export class PlayersComponent implements OnInit {
 
   deletePlayer(id: string) {
     this.playersService.deletePlayer(id);
-
 
     if(this.players.length < 1) {
       this.noPlayers = true;
