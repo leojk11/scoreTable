@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 import { Player } from '../player.model';
 import { PlayersService } from '../players.service';
 
@@ -10,6 +10,8 @@ import { PlayersService } from '../players.service';
 export class SinglePlayerComponent implements OnInit {
 
   @Input() player!: Player;
+
+  @Output() deleteClick: EventEmitter<void> = new EventEmitter();
 
   constructor(private playersService: PlayersService) { }
 
@@ -31,7 +33,8 @@ export class SinglePlayerComponent implements OnInit {
   }
 
   delete() {
-    this.playersService.deletePlayer(this.player.id);
+    // this.playersService.deletePlayer(this.player.id);
+    this.deleteClick.emit();
   }
 
 }

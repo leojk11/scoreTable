@@ -25,6 +25,12 @@ export class PlayersService {
     const playerIndex = this.players.findIndex(pl => pl.id === id);
 
     this.players.splice(playerIndex, 1);
+
+    console.log(this.players);
+
+    if(this.players.length < 1) {
+      this.players = [];
+    }
   }
   deleteAll() {
     this.players = [];

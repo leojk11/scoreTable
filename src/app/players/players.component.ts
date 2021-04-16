@@ -11,6 +11,8 @@ export class PlayersComponent implements OnInit {
 
   players: Player[] = [];
 
+  playerIndex!: number;
+
   noPlayers!: boolean;
 
   constructor(private playersService: PlayersService) { }
@@ -32,14 +34,29 @@ export class PlayersComponent implements OnInit {
   addPlayers() {
     this.players = this.playersService.getPlayers();
 
-    const index = this.players.length + 1;
+    const lastItem = this.players.slice(-1)[0];
 
-    const player = new Player(index, 0);
+    if(lastItem == undefined) {
+      this.playerIndex = 1;
+    } else {
+      this.playerIndex = lastItem.index + 1;
+    }
+
+    const player = new Player(this.playerIndex, 0);
 
     this.playersService.addPlayer(player);
 
     if(this.players.length > 0) {
       this.noPlayers = false;
+    }
+  }
+
+  deletePlayer(id: string) {
+    this.playersService.deletePlayer(id);
+
+
+    if(this.players.length < 1) {
+      this.noPlayers = true;
     }
   }
 

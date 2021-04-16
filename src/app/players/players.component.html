@@ -1,7 +1,7 @@
 <div class="players">
     <app-no-players *ngIf='noPlayers'></app-no-players>
 
-    <div class="players-wrapper">
+    <div class="players-wrapper" *ngIf='!noPlayers'>
         <div class="top">
             <div class="players-count">Total players: {{ players.length }}</div>
 
@@ -11,7 +11,11 @@
             </button>
         </div>
 
-        <app-single-player *ngFor='let player of players' [player]='player'></app-single-player>
+        <app-single-player 
+            *ngFor='let player of players' 
+            [player]='player'
+            (deleteClick)='deletePlayer(player.id)'
+        ></app-single-player>
     </div>
 
     <div class="button-wrapper">
